@@ -1,6 +1,6 @@
 set(CMAKE_CXX_FLAGS "-std=c++14 -Wall -Wextra")
 
-add_library(numberformat
+add_library(js-number-to-string
     ../include/js-number-to-string.hpp
     js-number-to-string.cc
 
@@ -31,3 +31,7 @@ add_library(numberformat
     utils.cc
     vector.h
 )
+
+# Example executable that uses libjs-number-to-string:
+add_executable(main main.cpp)
+target_link_libraries(main js-number-to-string)
