@@ -5,6 +5,9 @@
 #ifndef V8_BASE_MACROS_H_
 #define V8_BASE_MACROS_H_
 
+#include <stdlib.h>
+#include <stdint.h>
+
 #include "src/base/logging.h"
 
 // A macro used to make better inlining. Don't bother for debug builds.
