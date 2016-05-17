@@ -35,6 +35,8 @@ add_library(js-number-to-string
 install(TARGETS js-number-to-string ARCHIVE DESTINATION lib)
 install(FILES ${PROJECT_SOURCE_DIR}/include/js-number-to-string.hpp DESTINATION include)
 
-# Example executable that uses libjs-number-to-string:
-add_executable(main main.cpp)
-target_link_libraries(main js-number-to-string)
+if (BUILD_EXAMPLES)
+    # Example executable that uses libjs-number-to-string:
+    add_executable(main main.cpp)
+    target_link_libraries(main js-number-to-string)
+endif()
